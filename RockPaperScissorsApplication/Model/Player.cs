@@ -11,6 +11,9 @@ namespace RockPaperScissors.Model
         private string name;
         private HandSign handSign;
 
+        public Player()
+        {
+        }
 
         public Player(string name)
         {

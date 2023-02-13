@@ -13,5 +13,6 @@ namespace RockPaperScissors.Contracts
         HandSign MapRandomToMove();
         Move GetWinningMove(Move move);
         string GetWinner(Player player1, Player player2);
+        int EvaluatePlayers(Player player1, Player player2);
     }
 }

@@ -5,7 +5,7 @@ namespace RockPaperScissors
 {
     public class HandSign : IHandSign
     {
-        public readonly Move move;
+        public Move move;
         public HandSign() { 
         }
         public HandSign(Move move)
@@ -70,19 +70,34 @@ namespace RockPaperScissors
         /// <param name="player2">Handsign player2.</param>
         public string GetWinner(Player player1, Player player2)
         {
-            if (GetWinningMove(player1.HandSign.move).Equals(player2.HandSign.move))
+            if (EvaluatePlayers(player1, player2).Equals(1))
             {
-                //return player2.HandSign.move; //player 1 loses to player 2
-                return "Congrats " + player2.Name + "is the winner";
+                return "Congrats " + player2.Name + " is the winner";
             }
-            else if (GetWinningMove(player2.HandSign.move).Equals(player1.HandSign.move))
+            else if (EvaluatePlayers(player1, player2).Equals(2))
             {
-                //return player1.HandSign.move; //player 2 loses to player 1
-                return "Congrats " + player1.Name + "is the winner";
+                return "Congrats " + player1.Name + " is the winner";
             }
             else
             {
                 return "Sorry, It's a Draw!";
+            }
+        }
+
+        public int EvaluatePlayers(Player player1, Player player2) {
+            if (GetWinningMove(player1.HandSign.move).Equals(player2.HandSign.move))
+            {
+                //return player2.HandSign.move; //player 1 loses to player 2
+                return 1;
+            }
+            else if (GetWinningMove(player2.HandSign.move).Equals(player1.HandSign.move))
+            {
+                //return player1.HandSign.move; //player 2 loses to player 1
+                return 2;
+            }
+            else
+            {
+                return 0;
             }
         }
     }
