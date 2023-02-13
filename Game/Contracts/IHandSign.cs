@@ -7,16 +7,11 @@ using System.Threading.Tasks;
 
 namespace RockPaperScissors.Contracts
 {
-    interface IHandSign
+    public interface IHandSign
     {
         HandSign MapStringToMove(string userChoice);
-
         HandSign MapRandomToMove();
-
         Move GetWinningMove(Move move);
-
-
-
-
+        string GetWinner(Player player1, Player player2);
     }
 }

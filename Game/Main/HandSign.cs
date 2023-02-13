@@ -1,17 +1,19 @@
-﻿using RockPaperScissors.Model;
+﻿using RockPaperScissors.Contracts;
+using RockPaperScissors.Model;
 using System;
 namespace RockPaperScissors
 {
-    public class HandSign
+    public class HandSign : IHandSign
     {
         private readonly Move move;
-
+        public HandSign() { 
+        }
         public HandSign(Move move)
         {
             this.move = move;
         }
 
-        public static HandSign MapStringToMove(string userChoice)
+        public  HandSign MapStringToMove(string userChoice)
         {
             switch (userChoice.ToUpper())
             {
@@ -25,7 +27,7 @@ namespace RockPaperScissors
             return null;
         }
 
-        public static HandSign MapRandomToMove()
+        public HandSign MapRandomToMove()
         {
             Random random = new Random();
             int cpuChoice = random.Next(0, 2);
@@ -47,7 +49,7 @@ namespace RockPaperScissors
         /// </summary>
         /// <returns>The winning move.</returns>
         /// <param name="move">Handsign.</param>
-        public static Move GetWinningMove(Move move)
+        public Move GetWinningMove(Move move)
         {
             switch (move)
             {
@@ -67,7 +69,7 @@ namespace RockPaperScissors
         /// <returns>The winner.</returns>
         /// <param name="player1">Handsign player1.</param>
         /// <param name="player2">Handsign player2.</param>
-        public static string GetWinner(Player player1, Player player2)
+        public string GetWinner(Player player1, Player player2)
         {
             if (GetWinningMove(player1.HandSign.move).Equals(player2.HandSign.move))
             {

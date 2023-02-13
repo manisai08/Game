@@ -40,11 +40,12 @@
   <ItemGroup>
     <Compile Include="Contracts\IGame.cs" />
     <Compile Include="Contracts\IHandSign.cs" />
+    <Compile Include="Contracts\IPrintUtil.cs" />
     <Compile Include="Model\Move.cs" />
+    <Compile Include="Model\Player.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Main\Game.cs" />
     <Compile Include="Main\GameRunner.cs" />
-    <Compile Include="Main\Player.cs" />
     <Compile Include="Main\HandSign.cs" />
     <Compile Include="Main\PrintUtil.cs" />
     <Compile Include="Test\GameTest.cs" />

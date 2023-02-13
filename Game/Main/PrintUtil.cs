@@ -1,8 +1,17 @@
-﻿using System;
+﻿using RockPaperScissors.Contracts;
+using RockPaperScissors.Model;
+using System;
 namespace RockPaperScissors
 {
-    public class PrintUtil
+    public class PrintUtil : IPrintUtil
     {
+        private readonly IHandSign handSign;
+
+        public PrintUtil(IHandSign ihandSign)
+        {
+            handSign = ihandSign;
+        }
+
         public string GreetOpponent()
         {
             Console.WriteLine("Welcome to Rock, Paper, Scissors! It's you against the CPU.");
@@ -25,13 +34,13 @@ namespace RockPaperScissors
                               "S-Scissors\n" +
                               "Make your selection:");
             string input = Console.ReadLine();
-            var handSign = HandSign.MapStringToMove(input);
-            if (handSign == null)
+            var move = handSign.MapStringToMove(input);
+            if (move == null)
             {
                 Console.WriteLine("Sorry Invalid. Please choose again");
                 return ChooseHandSign();
             }
-            return handSign;
+            return move;
         }
     }
 }

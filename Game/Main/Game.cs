@@ -1,4 +1,5 @@
 ﻿using RockPaperScissors.Contracts;
+using RockPaperScissors.Model;
 using System;
 
 namespace RockPaperScissors
@@ -8,7 +9,14 @@ namespace RockPaperScissors
 
         private Player humanPlayer;
         private Player cpuPlayer;
-        private static PrintUtil printUtil = new PrintUtil();
+        private readonly IPrintUtil printUtil;
+
+        private readonly IHandSign handSign;
+
+        public Game(IHandSign ihandSign, IPrintUtil iprintUtil) {
+            handSign = ihandSign;
+            printUtil = iprintUtil;
+        }
 
         public void startGame()
         {
@@ -27,10 +35,10 @@ namespace RockPaperScissors
                 var humanHandSign = printUtil.ChooseHandSign();
                 this.humanPlayer.HandSign = humanHandSign;
                 //Generate a random hand for computer
-                this.cpuPlayer.HandSign = HandSign.MapRandomToMove();
+                this.cpuPlayer.HandSign = handSign.MapRandomToMove();
                 //compare choices
                 //Declare winner
-                Console.WriteLine(HandSign.GetWinner(this.humanPlayer, this.cpuPlayer));
+                Console.WriteLine(handSign.GetWinner(this.humanPlayer, this.cpuPlayer));
                 Console.WriteLine("If you want to continoue press Y");
                 repeat = Console.ReadLine();
             } while (repeat == "Y");

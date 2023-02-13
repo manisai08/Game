@@ -7,7 +7,9 @@ namespace RockPaperScissors
     {
         public static void Main(string[] args)
         {
-            IGame game = new Game();
+            IHandSign ihandSign = new HandSign();
+            IPrintUtil iprintUtil = new PrintUtil(ihandSign);
+            IGame game = new Game(ihandSign, iprintUtil);
             game.startGame();
 
         }
