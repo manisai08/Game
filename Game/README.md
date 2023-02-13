@@ -1,4 +1,4 @@
-# C# Programming Challenge: Rock, Paper, Scissors Game (OOP, Enum, Switch statements)
+
 
 ### Purpose:
 
@@ -21,9 +21,10 @@ The player shold then be asked if he would like to play another game. If the res
 ### Features:
 
 1. Language:  C# 
-2. IDE:  Visual Studio Community for Mac 2017, Version 7.5.3.7
-3. Testing Framework: Nunit
+2. IDE:  Visual Studio 
+3. Testing Framework: Xunit
 4. Hosted on Github
 
 ### Usage:
+1.  testable code and unit tests
 
