@@ -38,7 +38,7 @@ namespace RockPaperScissors.Test
         }
 
         /// <summary>
-        /// Handlers the with valid input positive test.
+        /// Handlers the with valid  positive test.
         /// </summary>
         [Fact(DisplayName = "HandSignWithGetWinningMove : Positive Scenario: Valid input")]
         public void HandSignWithGetWinningMove()
