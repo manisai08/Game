@@ -1,11 +1,11 @@
-﻿using NUnit.Framework;
+﻿using Xunit;
 using System;
 namespace RockPaperScissors.Test
 {
-    [TestFixture()]
+    
     public class PrintUtilTest
     {
-        [Test()]
+       
         public void TestCase()
         {
 
