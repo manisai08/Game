@@ -1,0 +1,22 @@
+
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RockPaperScissors", "RockPaperScissors.csproj", "{E555CE25-B18E-47E1-9429-758E60190990}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{F626EAD9-92C5-4785-AF21-8640DEFACA4A}"
+	ProjectSection(SolutionItems) = preProject
+		README.md = README.md
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x86 = Debug|x86
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E555CE25-B18E-47E1-9429-758E60190990}.Debug|x86.ActiveCfg = Debug|x86
+		{E555CE25-B18E-47E1-9429-758E60190990}.Debug|x86.Build.0 = Debug|x86
+		{E555CE25-B18E-47E1-9429-758E60190990}.Release|x86.ActiveCfg = Release|x86
+		{E555CE25-B18E-47E1-9429-758E60190990}.Release|x86.Build.0 = Release|x86
+	EndGlobalSection
+EndGlobal
