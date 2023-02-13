@@ -31,7 +31,12 @@ namespace RockPaperScissors
         {
             Random random = new Random();
             int cpuChoice = random.Next(0, 2);
+            return GetHandSign(cpuChoice);
+        }
 
+
+        public HandSign GetHandSign(int cpuChoice)
+        {
             switch (cpuChoice)
             {
                 case 0:
