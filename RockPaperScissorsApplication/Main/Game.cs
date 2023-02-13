@@ -32,7 +32,7 @@ namespace RockPaperScissors
                 //start game message
                 printUtil.StartGameMessage(humanPlayer);
                 //Get users hand, Note check for valid entry
-                var humanHandSign = printUtil.ChooseHandSign();
+                var humanHandSign = printUtil.GetHandSign();
                 this.humanPlayer.HandSign = humanHandSign;
                 //Generate a random hand for computer
                 this.cpuPlayer.HandSign = handSign.MapRandomToMove();

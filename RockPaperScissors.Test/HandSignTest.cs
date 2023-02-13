@@ -6,18 +6,15 @@ using RockPaperScissors.Model;
 namespace RockPaperScissors.Test
 {
 
-    public class HandSignTest2
+    public class HandSignTest
     {
         private HandSign _exeHandSignResult;
-        private Move _exeMoveResult;    
-        readonly IPrintUtil iprintUtil;
-        readonly IHandSign ihandSign = new HandSign();
-        
+        private Move _exeMoveResult;
+        private readonly IHandSign ihandSign = new HandSign();
 
-        public HandSignTest2() {
-            iprintUtil = new PrintUtil(ihandSign);
+        public HandSignTest() {
         }
-      
+
         /// <summary>
         /// Handlers the with valid input positive test.
         /// </summary>
@@ -27,7 +24,6 @@ namespace RockPaperScissors.Test
             GetValidHandSign();
             CheckMapStringToMoveExpectedValue();
         }
-       
         private void GetValidHandSign()
         {
             string input = "R";

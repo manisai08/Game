@@ -5,7 +5,7 @@ namespace RockPaperScissors
 {
     public class HandSign : IHandSign
     {
-        private readonly Move move;
+        public readonly Move move;
         public HandSign() { 
         }
         public HandSign(Move move)
@@ -61,7 +61,6 @@ namespace RockPaperScissors
                     return Move.Rock;
             }
         }
-
 
         /// <summary>
         /// Gets the winner.
