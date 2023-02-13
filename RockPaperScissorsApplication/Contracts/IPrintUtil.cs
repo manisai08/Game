@@ -10,9 +10,8 @@ namespace RockPaperScissors.Contracts
     public interface IPrintUtil
     {
         string GreetOpponent();
-
         void StartGameMessage(Player player);
-
-        HandSign ChooseHandSign();
+        HandSign GetHandSign();
+        HandSign ChooseHandSign(string sign);
     }
 }
